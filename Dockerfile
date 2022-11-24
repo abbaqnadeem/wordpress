@@ -9,3 +9,5 @@ ADD . /wordpress
 RUN mkdir -p /var/www/html
 
 RUN chgrp -R 0 /var/www/html/ && chmod -R g=u /var/www/html/
+
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
