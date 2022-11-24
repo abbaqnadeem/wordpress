@@ -10,4 +10,6 @@ RUN mkdir -p /var/www/html
 
 RUN chgrp -R 0 /var/www/html/ && chmod -R g=u /var/www/html/
 
+ENTRYPOINT [ "bash", "entrypoint.sh" ]
+
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
